@@ -1,0 +1,26 @@
+.Header {
+    background-color: rgb(84, 151, 78) !important;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    .imgBrand{
+        margin-right: 25px;
+    }
+
+    .link {
+        text-decoration: none;
+        color: white;
+        font-size: 25px;
+        margin-right: 40px;
+    }
+    .link:hover {
+        text-decoration: underline;
+    }
+
+    .inputSearch {
+        border: none;
+        width: 20rem;
+        margin: 0 auto;
+    }
+}
