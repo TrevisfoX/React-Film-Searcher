@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { ChangeFavorites } from "../../app/reducers/movies.reducer";
 import styles from "./MoviesItem.module.scss";
 import noImgPlaceholder from "../../Assets/image/no-iamge-placeholder.jpg";
-
 interface MoviesItemProps {
   title: string;
   id: string;
@@ -53,7 +52,7 @@ const MoviesItem: FC<MoviesItemProps> = (props: any) => {
       </Link>
 
       <div className={styles.btnFavorites} onClick={handleMarkToFavorite}>
-        &#129505;
+        &#11088;
       </div>
     </div>
   );

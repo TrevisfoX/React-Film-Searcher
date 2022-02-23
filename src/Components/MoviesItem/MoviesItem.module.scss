@@ -1,8 +1,11 @@
+.wrapper {
+    position: relative;
+}
+
 
 .MoviesItem {
     background-color: rgb(68, 68, 68);
     height: 550px;
-    // llinear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c)
     position: relative;
     cursor: pointer;
     margin-bottom: 25px;
@@ -57,13 +60,15 @@
 }
 
 
-.btnFavorites {
+.btnFavorites {  
     position: absolute;
-    top: .5rem;
-    right: .5rem;
+    top: 0;
+    right: 0;
     cursor: pointer;
 }
 
 .link {
     text-decoration: none;
 }
+
+

@@ -7,20 +7,26 @@ import styles from "./MovieDescription.module.scss";
 interface MovieDescriptionProps {}
 
 const MovieDescription: FC<MovieDescriptionProps> = () => {
-  const {id}: any = useParams();
+  const { id }: any = useParams();
   const dispatch = useDispatch();
-  const details = useSelector((state: any) => state.movies.currentMovie)
+  const details = useSelector((state: any) => state.movies.currentMovie);
 
   useEffect(() => {
     dispatch(fetchMoviesDescription(id));
-  }, [id])
+  }, [id]);
 
   return (
     <div className={styles.MovieDescription}>
-      <img src={`https://image.tmdb.org/t/p/w500/${details?.poster_path}`} alt="poster" />
-      <h1>{details?.title}</h1>
-      <h2>{details?.tagline}</h2>
-      <p>{details?.overview}</p>
+      <img
+        src={`https://image.tmdb.org/t/p/w500/${details?.poster_path}`}
+        alt="poster"
+        className={styles.posterImg}
+      />
+      <div className={styles.descriptionWrapper}>
+        <h1>{details?.title}</h1>
+        <h2>{details?.tagline}</h2>
+        <p>{details?.overview}</p>
+      </div>
     </div>
   );
 };

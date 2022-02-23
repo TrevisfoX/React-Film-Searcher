@@ -1,3 +1,19 @@
 .MovieDescription {
-    padding-top: 100px;
+    padding: 15px;
+    display: flex;
+    max-width: 1440px;
+    width: 100%;
+    color: white;
+    margin: 80px auto;
+    background-color: rgb(68, 68, 68);
+    border-radius: 10px;
+
+    .posterImg {
+        width: 600px;
+        height: 600px;
+    }
+
+    .descriptionWrapper {
+        padding-left: 25px;
+    }
 }

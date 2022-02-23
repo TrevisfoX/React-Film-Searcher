@@ -1,7 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { useDispatch, useSelector } from "react-redux";
-import Loader from "react-spinners/ClipLoader";
 import {
   fetchMoviesList,
   fetchMoviesReceive,
@@ -53,7 +52,7 @@ const MoviesBase: FC<MoviesBaseProps> = () => {
   const loadMoreFilms = () => {
     setTimeout(() => {
       setPage(page + 1);
-    }, 5000);
+    }, 1000);
   };
 
   return (
@@ -62,7 +61,7 @@ const MoviesBase: FC<MoviesBaseProps> = () => {
         className={styles.MoviesBase}
         next={loadMoreFilms}
         hasMore={hasMorePages}
-        loader={<Loader/>}
+        loader={''}
         dataLength={moviesList.length}
       >
         {moviesList?.length ? (
@@ -79,7 +78,7 @@ const MoviesBase: FC<MoviesBaseProps> = () => {
             />
           ))
         ) : (
-          <h1 className={styles.notFoundMovie}>Sorry, we didn't find such a movie</h1>
+          <h1 className={styles.notFoundMovie}>Sorry, we didn't find such a movies</h1>
         )}
       </InfiniteScroll>
     </>
